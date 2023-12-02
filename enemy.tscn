@@ -6,6 +6,8 @@
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource("1_gn2h8")
+speed = 40
+armor = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4a8k3")
