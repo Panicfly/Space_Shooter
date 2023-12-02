@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cb7ukye6tdigs"]
+[gd_scene load_steps=4 format=3 uid="uid://cb7ukye6tdigs"]
 
 [ext_resource type="Script" path="res://hit_effect.gd" id="1_3t4am"]
+[ext_resource type="AudioStream" uid="uid://biufeeif3kjlm" path="res://hit_sound.wav" id="2_0ebls"]
 
 [sub_resource type="Gradient" id="Gradient_8sut6"]
 offsets = PackedFloat32Array(0.721854, 1)
@@ -21,5 +22,10 @@ color_ramp = SubResource("Gradient_8sut6")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0ebls")
+volume_db = -7.496
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

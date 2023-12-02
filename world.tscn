@@ -24,6 +24,7 @@ position = Vector2(16, 96)
 position = Vector2(320, 0)
 
 [node name="ScoreLabel" type="Label" parent="."]
+z_index = 2
 offset_left = 136.0
 offset_right = 184.0
 offset_bottom = 23.0
