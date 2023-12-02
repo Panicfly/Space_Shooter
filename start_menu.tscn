@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmkb8lhu04ehx"]
+
+[ext_resource type="LabelSettings" uid="uid://cmelc80wbqgw4" path="res://pixelfont.tres" id="1_a1ss3"]
+[ext_resource type="Script" path="res://start_menu.gd" id="1_lc616"]
+[ext_resource type="PackedScene" uid="uid://bjololjwym23h" path="res://star_particles.tscn" id="3_4yalp"]
+
+[node name="StartMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_lc616")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "Press Space to Start
+Press ESC to Quit"
+label_settings = ExtResource("1_a1ss3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StarParticles" parent="." instance=ExtResource("3_4yalp")]
